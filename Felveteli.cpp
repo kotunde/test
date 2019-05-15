@@ -2,9 +2,6 @@
 // Created by attila on 26.11.2018.
 //
 
-#include <algorithm>
-#include <fstream>
-#include "Felveteli.h"
 
 //bool mycmp1(const Diak d1, const Diak d2)
 //{
@@ -53,38 +50,5 @@ Felveteli::Felveteli(string filename)
         while (ifs >>diak)
         {
             this->diakok.push_back(diak);
-        }
-    }
-    else cout << "Hiba";
-}
-void Felveteli::beiratkozas(Diak d)
-{
-    this->diakok.push_back(d);
-}
-
-void Felveteli::rendezesABC()
-{
-    sort(diakok.begin(),diakok.end(),mycmp1());
-}
-
-void Felveteli::rendezesAtlag()
-{
-    sort(diakok.begin(),diakok.end(),mycmp2());
-}
-
-void Felveteli::kiiratas(ostream & cout)
-{
-    for (auto& it:diakok)
-    {
-        cout << it << endl;
-    }
-}
-
-void Felveteli::bejutottak(ostream& os)
-{
-    sort(diakok.begin(),diakok.end(),mycmp2());
-    for (int i=0; i<this->helyekSzama; ++i)
-    {
-        os<< diakok[i] << endl;
-    }
-}
+       
+void Felveteli::kiiratas(ostrea
